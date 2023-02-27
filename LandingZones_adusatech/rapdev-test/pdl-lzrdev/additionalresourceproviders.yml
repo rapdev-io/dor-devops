@@ -1,0 +1,4 @@
+resourceProviders:
+  - 'Microsoft.Advisor'
+
+  - 'Microsoft.DevAI'
