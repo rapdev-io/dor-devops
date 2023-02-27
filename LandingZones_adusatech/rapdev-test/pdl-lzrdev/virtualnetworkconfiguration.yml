@@ -1,0 +1,8 @@
+virtualNetworks: 
+  - environment: 'non-prod'
+    sequenceNr: '01'
+    networkMask: '/23'
+ 
+  - environment: 'prod'
+    sequenceNr: '02'
+    networkMask: '/25'
