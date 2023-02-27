@@ -1,0 +1,21 @@
+variables:
+  primaryLocation: centralus
+  features_prdRequired: false
+  accountInfo_businessUnit: pdl
+  accountInfo_devOpsOrg: ADUSA-CF2
+  accountInfo_subscriptionPurpose: test1
+  accountInfo_owner: vn4430i@delhaize.com
+  enablementDomain: adsatech
+  accountInfo_roleGroup: cld-alus-adusatech-rol-pdl-lzrdev
+  accountInfo_opCo: adusatech
+  accountInfo_uniqueName: lzrdev
+  opco: pdl
+  primaryLocationCode: cu
+  advancedFeatures_virtualNetworkConfiguration: false
+  advancedFeatures_additionalResourceProviders: true
+  features_agentPoolRequired: true
+  features_nonprdRequired: true
+  aksOnNonPrd: false
+  aksNameNonPrd: false
+  aksOnPrd: false
+  aksNamePrd: false
