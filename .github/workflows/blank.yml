@@ -16,7 +16,7 @@ on:
       MY_INPUT_VAR:
         type: string
         description: "A sample input variable for manual triggering"
-        required: true
+        required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
