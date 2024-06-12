@@ -14,9 +14,9 @@ on:
   workflow_dispatch:
     inputs:
       MY_INPUT_VAR:
+        type: string
         description: "A sample input variable for manual triggering"
-        required: false
-        default: "default_value"  # Optional default value
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
