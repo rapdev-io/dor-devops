@@ -25,6 +25,10 @@ on:
           type: string
           required: true
           default: 'hi'
+        year:
+          type: string
+          required: true
+          default: '2024'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
