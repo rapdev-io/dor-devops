@@ -15,15 +15,15 @@ on:
     inputs:
       MY-INPUT_VAR0002!:
         type: string
-        description: "A sample input variable for manual triggering"
+        description: "input 002"
         required: false
       MY_INPUT_VAR3:
         type: string
-        description: "A sample input variable for manual triggering"
+        description: "input 3"
         required: false
       MY_INPUT_VAR4:
         type: string
-        description: "A sample input variable for manual triggering"
+        description: "input 4"
         required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
