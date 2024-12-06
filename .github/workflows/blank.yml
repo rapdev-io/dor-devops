@@ -13,7 +13,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      MY_INPUT_VAR0002:
+      MY-INPUT_VAR0002:
         type: string
         description: "A sample input variable for manual triggering"
         required: false
