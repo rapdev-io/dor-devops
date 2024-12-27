@@ -25,6 +25,8 @@ on:
         type: string
         description: "input 4"
         required: false
+      deploymentID:
+        type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
