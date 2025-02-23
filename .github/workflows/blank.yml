@@ -16,6 +16,7 @@ on:
       MY-INPUT_VAR0002:
         type: string
         description: "input 002"
+        default: "var2"
         required: false
       MY_INPUT_VAR3:
         type: string
@@ -24,6 +25,7 @@ on:
       MY_INPUT_VAR4:
         type: string
         description: "input 4"
+        default: "var4"
         required: false
       deploymentID:
         type: string
