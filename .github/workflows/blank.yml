@@ -18,10 +18,10 @@ on:
         description: "input 002"
         default: "var2"
         required: false
-      MY_INPUT_VAR3:
-        type: string
-        description: "input 3"
-        required: false
+      # MY_INPUT_VAR3:
+      #   type: string
+      #   description: "input 3"
+      #   required: false
       MY_INPUT_VAR4:
         type: string
         description: "input 4"
