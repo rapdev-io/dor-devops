@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print workflow dispatch input
-        run: echo "Input value ${{ github.event.inputs.MY-INPUT_VAR0002 }}"
+        run: echo "Input value ${{ github.event.inputs.deploymentID }}"
 
   # This workflow contains a single job called "build"
   build:
