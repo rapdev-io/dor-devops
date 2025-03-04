@@ -1,0 +1,13 @@
+test
+business_applications:
+  - application_id:77777
+  - application_id:10481
+microservice:
+  name: LandingZone microservice Test
+  owned_by:
+    name: Dor Vaknin
+    email: Dor.Vaknin@retailbusinessservices.com
+  support_group: Dev Ops Project
+  application_service_tags: 
+    - ApplicationName:Testing Landing App 
+    - repo:ah-tech-enablement-landingzones
