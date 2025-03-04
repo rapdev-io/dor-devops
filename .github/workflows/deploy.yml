@@ -39,7 +39,7 @@ jobs:
         id: create-instance
         run: |
           INSTANCE_ID=$(aws ec2 run-instances \
-            --image-id ami-0685cb76db3624f25 \
+            --image-id ami-0fc82f4dabc05670b \
             --instance-type t2.micro \
             --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${{ inputs.resourceName }}},{Key=snInstance,Value=${{ inputs.snInstance }}},{Key=deploymentID,Value=${{ inputs.deploymentID }} }]" \
             --query 'Instances[0].InstanceId' --output text)
