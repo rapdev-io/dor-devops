@@ -1,0 +1,50 @@
+name: Deploy EC2 Instance
+
+on:
+  workflow_dispatch:
+    inputs:
+      resourceName:
+        description: "EC2 Instance Name"
+        required: true
+        type: string
+      snInstance:
+        description: "ServiceNow Instance"
+        required: true
+        type: string
+      location:
+        description: "AWS Region"
+        required: true
+        type: string
+      deploymentID:
+        description: "Deployment ID"
+        required: true
+        type: string
+
+jobs:
+  deploy-ec2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ inputs.location }}
+
+      - name: Create EC2 instance
+        id: create-instance
+        run: |
+          INSTANCE_ID=$(aws ec2 run-instances \
+            --image-id ami-12345678 \  # Replace with a valid AMI ID
+            --instance-type t2.micro \
+            --key-name my-key-pair \  # Replace with your key pair
+            --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${{ inputs.resourceName }}},{Key=snInstance,Value=${{ inputs.snInstance }}},{Key=deploymentID,Value=${{ inputs.deploymentID }} }]" \
+            --query 'Instances[0].InstanceId' --output text)
+          echo "INSTANCE_ID=$INSTANCE_ID" >> $GITHUB_ENV
+
+      - name: Output EC2 instance ID
+        run: echo "Created EC2 Instance with ID $INSTANCE_ID"
