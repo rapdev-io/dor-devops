@@ -39,9 +39,8 @@ jobs:
         id: create-instance
         run: |
           INSTANCE_ID=$(aws ec2 run-instances \
-            --image-id ami-12345678 \  # Replace with a valid AMI ID
+            --image-id ami-0685cb76db3624f25 \
             --instance-type t2.micro \
-            --key-name my-key-pair \  # Replace with your key pair
             --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${{ inputs.resourceName }}},{Key=snInstance,Value=${{ inputs.snInstance }}},{Key=deploymentID,Value=${{ inputs.deploymentID }} }]" \
             --query 'Instances[0].InstanceId' --output text)
           echo "INSTANCE_ID=$INSTANCE_ID" >> $GITHUB_ENV
